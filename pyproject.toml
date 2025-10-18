@@ -1,0 +1,49 @@
+[project]
+name = "mymanim"
+version = "0.1.0"
+description = "A 3D animation and visualization project using Manim Community Edition."
+authors = [{ name = "Junell" }]
+readme = "README.md"
+requires-python = ">=3.12"
+
+# ✅ 项目运行所需依赖
+dependencies = [
+    "manim>=0.19.0",
+    "numpy>=1.26",
+    "pydub",
+]
+
+# ✅ 可选依赖分组（如开发环境）
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "pytest",
+]
+
+# ✅ 项目入口点（如果以后想用命令行运行）
+[project.scripts]
+mymanim = "main:main"
+
+# ✅ 使用 uv 作为包管理与运行工具
+[tool.uv]
+package = true
+
+# ✅ 设置构建后端（标准 setuptools）
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# ✅ 代码格式化与风格控制（建议配置）
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["tests"]
