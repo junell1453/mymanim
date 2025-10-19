@@ -56,7 +56,7 @@ cd mymanim
 
 ---
 
-## 六、安装 Manim（使用 uv）
+## 四、安装 Manim（使用 uv）
 
 
 ```bash
@@ -67,15 +67,14 @@ uv pip install manim
 
 ---
 
-## 八、运行 Manim
+## 五、运行 Manim
 
 无需手动激活环境，可直接运行：
 
 ```bash
-uv run manim -pql main.py SceneName
+# uv run manim -pql main.py SceneName
+manim -pql derivative_parabola.py DerivativeParabola
 ```
-
-或使用 VS Code 的运行按钮（确保解释器设置为 `.venv`）。
 
 
 ---
