@@ -53,17 +53,17 @@ uv --version
 # 创建项目
 uv init mymanim
 cd mymanim
-
+```
 ---
 
 ## 四、安装 Manim（使用 uv）
-
 
 ```bash
 uv python install 3.12
 uv venv --python 3.12
 uv pip install manim
 ```
+
 
 ---
 
@@ -72,10 +72,14 @@ uv pip install manim
 无需手动激活环境，可直接运行：
 
 ```bash
-# uv run manim -pql main.py SceneName
-manim -pql derivative_parabola.py DerivativeParabola
+uv run manim -pql derivative_parabola.py DerivativeParabola
 ```
 
+有(mymanim)提示符时表示已进入虚拟环境，可运行:
+
+``` bash
+manim -pql derivative_parabola.py DerivativeParabola
+```
 
 ---
 
